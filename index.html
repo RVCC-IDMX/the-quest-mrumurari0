@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs Quest</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+  HAP Educational Content © 2026 Cynthia Teeters. All rights reserved.
+  HyBit A. ProtoBot (HAP) character and the apprentice learning methodology are proprietary educational innovations.
+  -->
+
+  <main class="quest-container">
+    <!-- Quest Header -->
+    <header class="quest-header">
+      <img
+        src="https://res.cloudinary.com/cynthia-teeters/image/upload/f_auto,q_auto,w_100,c_limit/v1759495998/hap-waving_dgzacg.jpg"
+        alt="HAP waving"
+        class="hap-header-image"
+      >
+      <h1>THE QUEST FOR THE <span id="quest-item">???</span></h1>
+    </header>
+
+    <!-- Hero Info -->
+    <section class="hero-info">
+      <h2><span id="hero-emoji" aria-hidden="true"></span> HERO: <span id="hero-name">???</span></h2>
+    </section>
+
+    <!-- Status Bar -->
+    <section class="status-bar">
+      <div class="status-item">
+        <span class="status-icon">❤️</span>
+        <span>Health: <span id="health">???</span>/100</span>
+      </div>
+      <div class="status-item">
+        <span class="status-icon">💰</span>
+        <span>Gold: <span id="gold">???</span></span>
+      </div>
+    </section>
+
+    <!-- Story Text -->
+    <section class="story-section">
+      <pre id="story-text">Your adventure awaits... Complete adventure.js to begin!</pre>
+    </section>
+
+    <!-- Final Status -->
+    <section class="final-status">
+      <h3>FINAL STATUS</h3>
+      <p>❤️ <span id="final-health">???</span> | 💰 <span id="final-gold">???</span></p>
+    </section>
+
+    <!-- Quest Result -->
+    <section class="quest-result">
+      <p id="quest-result">Complete your adventure to see the result!</p>
+    </section>
+  </main>
+
+  <noscript>
+    <p style="padding: 1rem; text-align: center;">
+      JavaScript is required to play Mad Libs Quest. Please enable JavaScript in your browser.
+    </p>
+  </noscript>
+
+  <!-- Scripts: helpers.js MUST load before adventure.js -->
+  <script src="helpers.js"></script>
+  <script src="adventure.js"></script>
+</body>
+</html>
