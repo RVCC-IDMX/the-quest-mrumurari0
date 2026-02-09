@@ -14,11 +14,11 @@
 // Fill in the empty strings with your hero's details
 // Tip: See docs/emojis-and-encoding.md for emoji ideas!
 
-const heroName = "";        // Your hero's name (e.g., "Luna the Brave")
-const heroEmoji = "";       // Your hero's emoji (e.g., "🧙" or "⚔️")
-const questItem = "";       // What they're seeking (e.g., "Golden Keyboard")
-const questLocation = "";        // Where the quest takes place (e.g., "Whispering Mountains")
-const enemyType = "";       // What attacks them (e.g., "Shadow Dragon")
+const heroName = "Talia";        // Your hero's name (e.g., "Luna the Brave")
+const heroEmoji = "🧝‍♀️";       // Your hero's emoji (e.g., "🧙" or "⚔️")
+const questItem = "a magic crystal";       // What they're seeking (e.g., "Golden Keyboard")
+const questLocation = "an enchanted forest";        // Where the quest takes place (e.g., "Whispering Mountains")
+const enemyType = "goblins";       // What attacks them (e.g., "Shadow Dragon")
 
 // ---------------------------------------------
 // PART 2: STARTING STATUS (study this pattern!)
@@ -50,12 +50,12 @@ const foundPotion = coinFlip();               // true or false randomly
 health = health - enemyDamage;
 
 // TODO: Add treasureFound to gold
-gold = ;
+gold = gold + treasureFound;
 
 // TODO: If foundPotion is true, add 25 to health using choose()
 // Hint: choose(foundPotion, 25, 0) returns 25 if true, 0 if false
-const potionHealing = ;
-health = ;
+const potionHealing = choose(foundPotion, 25, 0);
+health = health + potionHealing;
 
 // =============================================
 // QUICK REFERENCE - Variables you can use:
@@ -71,15 +71,15 @@ health = ;
 // Fill in the ${} expressions to tell the story
 
 const storyText = `
-${heroEmoji} ${heroName} ventured into the ${}
-searching for the ${}.
+${heroEmoji} ${heroName} ventured into the ${questLocation}
+searching for the ${questItem}.
 
-A wild ${} attacked!
-Damage taken: ${}
+A wild ${enemyType} attacked!
+Damage taken: ${enemyDamage};
 
-${heroEmoji} ${} found a chest containing ${} gold!
+${heroEmoji} ${heroName} found a chest containing ${treasureFound} gold!
 
-Found a potion: ${} | Healed: ${}
+Found a potion: ${foundPotion} | Healed: ${potionHealing}
 `;
 
 // ---------------------------------------------
@@ -88,12 +88,12 @@ Found a potion: ${} | Healed: ${}
 // Did your hero survive? Health must be greater than 0
 
 // TODO: Create a boolean - is health greater than 0?
-const survived = ;
+const survived = health > 0;
 
 // TODO: Use choose() to pick the right message
 // If survived is true: "Quest Complete!"
 // If survived is false: "Quest Failed..."
-const survivalMessage = ;
+const survivalMessage = choose(survived, "Quest Complete!", "Quest Failed...");
 
 // ---------------------------------------------
 // SHOW THE RESULTS
